@@ -29,14 +29,15 @@ void buildingURL() {
   String unitMetric = "units=metric";
   String and = "&";
 
-  URLCurrentAlberta = baseURL_Current+albertaId+and+apiKey+and+mode+unitMetric;
-  URLForecastAlberta = baseURL_Forecast+albertaId+and+apiKey+and+mode+unitMetric;
-  URLCurrentEdmonton = baseURL_Current+edmontonId+and+apiKey+and+mode+unitMetric;
-  URLForecastEdmonton = baseURL_Forecast+edmontonId+and+apiKey+and+mode+unitMetric;
-  URLCurrentToronto = baseURL_Current+torontoId+and+apiKey+and+mode+unitMetric;
-  URLForecastToronto = baseURL_Forecast+torontoId+and+apiKey+and+mode+unitMetric;
-  URLCurrentStjohns = baseURL_Current+stjohnsId+and+apiKey+and+mode+unitMetric;
-  URLForecastStjohns = baseURL_Forecast+stjohnsId+and+apiKey+and+mode+unitMetric;
+  URLCurrentAlberta = baseURL_Current+albertaId+and+apiKey+and+mode+and+unitMetric;
+  println(URLCurrentAlberta);
+  URLForecastAlberta = baseURL_Forecast+albertaId+and+apiKey+and+mode+and+unitMetric;
+  URLCurrentEdmonton = baseURL_Current+edmontonId+and+apiKey+and+mode+and+unitMetric;
+  URLForecastEdmonton = baseURL_Forecast+edmontonId+and+apiKey+and+mode+and+unitMetric;
+  URLCurrentToronto = baseURL_Current+torontoId+and+apiKey+and+mode+and+unitMetric;
+  URLForecastToronto = baseURL_Forecast+torontoId+and+apiKey+and+mode+and+unitMetric;
+  URLCurrentStjohns = baseURL_Current+stjohnsId+and+apiKey+and+mode+and+unitMetric;
+  URLForecastStjohns = baseURL_Forecast+stjohnsId+and+apiKey+and+mode+and+unitMetric;
 
 
 

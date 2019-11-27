@@ -1,5 +1,5 @@
 // Global Variables
-color black = 0;
+color white = 0;
 float titleX, titleY, titleRectWidth, titleRectHeight;
 float quitX, quitY, quitRectWidth, quitRectHeight;
 float currentAPIX, currentAPIY, currentAPIRectWidth, currentAPIRectHeight;
@@ -9,7 +9,7 @@ float apiCallX2, apiCallY2, apiCallRectWidth2, apiCallRectHeight2; //Calgary
 float apiCallX3, apiCallY3, apiCallRectWidth3, apiCallRectHeight3; //Red Deer
 
 void GUI_Setup() {
-  background(black); // Add dark mode
+  background(white); // Add dark mode
   //rect(X, Y, rectWidth, rectHeight); //Continue laying out rectangles according to your Case Study
   titleX = width*0;
   titleY = height*0;

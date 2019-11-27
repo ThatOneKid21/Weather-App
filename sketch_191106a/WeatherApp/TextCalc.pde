@@ -7,8 +7,8 @@ float currentTempEdm, currentTempToronto, currentTempSJ;
 String nameEdm, nameToro, nameSJ;
 
 void textSetup() {
-  titleFont = createFont ("Harrington", height); // //Must also Tools / Create Font / Find Font / Do Not Press "OK"
-  title = "Kevin's ";
+  titleFont = createFont ("ComicSansMS-Bold", height); // //Must also Tools / Create Font / Find Font / Do Not Press "OK"
+  title = "Kevin's Super Cool Weather App ";
   titleWidth = width * 1/2;
   titleHeight = height * 1/10;
   quit = "X";
