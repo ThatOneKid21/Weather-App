@@ -1,6 +1,10 @@
 // Open Weather Map App
 // Global Variables
 String edmTemp, toroTemp, sjTemp;
+color purple = #FF03F3;
+color yellow = #FFF703;
+color regularButton = purple;
+color hoverOverButton = yellow;
 
 void setup() {
   buildingURL();
@@ -28,15 +32,25 @@ void setup() {
 }
 
 void draw() {
-line(mouseX, mouseY, 50, 50);
+  //println ("Mousex:", mouseX, "\tMouseY:", mouseY);
+
+  if (mouseX>width*15/16 && mouseX<width && mouseY>0 && mouseY<height*1/16) { //Hover Over
+    fill(hoverOverButton);
+    rect(width*15/16, height*0/16, width*1/16, height*1/16);
+  } else {
+    fill(regularButton);
+    rect(width*15/16, height*0/16, width*1/16, height*1/16);
+  }
 }
 
 void mousePressed() {
   APICall();
   unwrapToVariables();
   println(apiCurrentDateCall);
-  exit();
-  
+
+  if (mouseX>width*15/16 && mouseX<width && mouseY>0 && mouseY<height*1/16) {
+    exit();
+  }
   if ( mouseX>apiCallX1 && mouseX<apiCallX1+apiCallRectWidth1 && mouseY>apiCallY1 && mouseY<apiCallY1+apiCallRectHeight1 ) {
     edmTemp = String.valueOf(tempEdmonton);
     rect(currentTempX, currentTempY, currentTempRectWidth, currentTempRectHeight);
@@ -51,15 +65,13 @@ void mousePressed() {
     println(tempToronto, toroTemp);
   }
   //
-  
+
   if (mouseX>apiCallX3 && mouseX<apiCallX3+apiCallRectWidth3 && mouseY>apiCallY3 && mouseY<apiCallY3+apiCallRectHeight3) {
     sjTemp = String.valueOf(tempStjohns);
     rect(currentTempX, currentTempY, currentTempRectWidth, currentTempRectHeight);
     textDraw(sjTemp, titleFont, height, #2C08FF, CENTER, CENTER, currentTempX, currentTempY, currentTempRectWidth, currentTempRectHeight); //Calgary
     println(tempStjohns, sjTemp);
   }
-  
-  //
 }
 
 void keyPressed() {
